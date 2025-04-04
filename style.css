@@ -1,0 +1,173 @@
+/* Import a premium Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --bg-light: #f5f5f5;
+    --bg-dark: #181818;
+    --container-light: #ffffff;
+    --container-dark: #222;
+    --text-light: #333;
+    --text-dark: #fff;
+    --primary-color: #3498db;
+    --hover-color: #2980b9;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+body.dark-mode .container {
+    background-color: var(--container-dark);
+}
+
+body.dark-mode input,
+body.dark-mode label {
+    color: var(--text-dark);
+}
+
+body {
+    background: var(--bg-light);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    transition: background 0.3s ease;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.theme-toggle input {
+    display: none;
+}
+
+.toggle-label {
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.toggle-label:hover {
+    transform: scale(1.2);
+}
+
+/* Container */
+.container {
+    background: var(--container-light);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+/* Title */
+h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+body.dark-mode h2 {
+    color: var(--text-dark);
+}
+
+/* Output Section */
+.output-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+input[type="text"] {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    padding: 5px;
+    outline: none;
+    color: var(--text-light);
+    font-weight: bold;
+}
+
+body.dark-mode input[type="text"] {
+    color: var(--text-dark);
+}
+
+/* Copy Button */
+#copyBtn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#copyBtn:hover {
+    background: var(--hover-color);
+}
+
+/* Options */
+.options {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 16px;
+    color: var(--text-light);
+}
+
+body.dark-mode .options {
+    color: var(--text-dark);
+}
+
+input[type="checkbox"],
+input[type="number"] {
+    accent-color: var(--primary-color);
+}
+
+/* Generate Button */
+#generate {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 14px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 6px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+#generate:hover {
+    background: var(--hover-color);
+}
+
+/* Mobile Responsive */
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+    }
+}
